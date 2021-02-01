@@ -1,0 +1,178 @@
+/* Generalise
+-----------------------------------------------------------*/
+html{overflow-y: scroll;overflow-x: hidden;scroll-behaviour: smooth;}
+html, body{margin: 0; padding: 0; font-size: 14px; line-height: 1.6em;}
+body{color: #CBCBCB; background-color: #4A4E57;}
+
+a{color: #DC3545; ouline: none; text-decoration: none !important;}
+a:active, a:focus{background: transparent;}
+
+nav, body, input, textarea{font-family: Verdana, Geneva, sans-serif;}
+.wrapper{
+	display: block;
+	position: relative;
+	width: 100%;
+	margin: 0; padding: 0;
+	text-align: left; word-wrap: break-word;
+}
+
+/* Transition fade. This gives a smooth transition effect to all the elements */
+*, *::before, *::after{transition: all 0.2s ease-in-out; list-style: none;}
+
+h1, h2, h3, h4, h5, h6, .heading{
+	font-family: "Fira Code", monospace;
+	margin: 0;
+	line-height: normal;
+	font-weight: normal;
+}
+address{font-style: normal; font-weight: normal;}
+
+.font-xs{font-size: 0.8rem;}
+
+/* Additional Menu Links and Social Icons
+---------------------------------------------------*/
+#secondaryNavbar .navbar-nav .nav-item{
+	display: flex; /* For aligning "|" after each link */
+}
+#secondaryNavbar .navbar-nav .nav-item::after{
+	content: "|";
+	margin-left: 10px;
+	align-self: center;
+}
+/* Remove the divider "|" and margin after the last link */
+#secondaryNavbar .navbar-nav .nav-item:last-child::after{
+	margin-left: 0;
+	content: "";
+}
+/* Font Awesome Icons */
+.social-icon{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.social-icon a{
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 18px;
+	text-align: center;
+	color: #32353C; /* Dark Grey */
+	background-color: #FFF;
+}
+.social-icon li {
+	display: inline-block;
+	margin: 0 5px 0 0;
+	padding: 0;
+	line-height: normal;
+}
+.social-icon a:hover {
+	color: #FFF !important;
+}
+
+/* Background colors for Font Awesome Icons */
+.faicon-facebook:hover{
+	background-color: #3B5998 !important;
+}
+.faicon-twitter:hover{
+	background-color: #00ACEE !important;
+}
+.faicon-instagram:hover{
+	background-color: #EA4C89 !important;
+}
+.faicon-linkedin:hover{
+	background-color: #0E76A8 !important;
+}
+.faicon-pinterest:hover{
+	background-color: #C8232C !important;
+}
+/* Header for text / logo
+---------------------------------------------------------*/
+#header header{
+	height: 6rem;
+}
+#header h1{
+	font-size: 3.5rem;
+	letter-spacing: 3px;
+}
+#header a{
+	color: inherit;
+}
+#header .t3{
+	font-family: Ubuntu, sans-serif; font-weight: 600;
+}
+#header h1:hover{
+	color: #28A745 !important;
+	cursor: pointer;
+} 
+
+/* Media Queries for Responsiveness
+sm: 576px; md: 768px; lg: 992px; xl: 1200px; */
+
+@media screen and (max-width: 992px) {
+	#header h1{
+		font-size: 3rem;
+	}
+	#header h2{
+		font-size: 1.5rem;
+	}
+	#header .flex-row{
+		flex-direction: column !important;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	#header h2{
+		font-size: 1.15rem;
+	}
+}
+
+/* Navigation/Menu background-repeat
+----------------------------------------------------*/
+#mainNavbar .navbar .nav-item:hover{
+	 background-color: rgba(220, 53, 69, 0.7);
+}
+#mainNavbar .navbar .active{
+	background-color: #DC3545;
+}
+
+/* To remove space on top and bottom of nav links */
+#mainNavbar a.nav-link{
+	padding: 0.8rem;
+}
+
+#mainNavbar .navbar-dark .navbar-nav .nav-link:focus,
+#mainNavbar .navbar-dark .navbar-nav .nav-link:hover{
+	color: #FFF;
+}
+.dropdown-item{
+	color: #FFF;
+}
+.dropdown-item:hover{
+	background-color: #DC3545;
+} 
+/* Cover Image (Page Intro)
+--------------------------------------------*/
+#cover-image #pageintro{
+	padding: 200px 0;
+}
+#cover-image #pageintro .heading{
+	font-family: 'Dancing Script', cursive;
+	font-size: 8rem;
+	font-weight: 700;
+}
+#cover-image #pageintro p{
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.4rem;
+}
+#cover-image #pageintro article{
+	display: block;
+	overflow: hidden;
+}
+#cover-image{
+	background: url(../img/bg-pic.jpeg) fixed center no-repeat;
+	height: 900px;
+	background-size: cover;
+}
